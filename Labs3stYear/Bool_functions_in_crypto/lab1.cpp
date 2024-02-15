@@ -9,6 +9,7 @@ class BF
 public:
     BF(int nn = 1, const int type = 0);    //type = {0,1,2}, if type = 0, then f = 0. type =1, f =1. type 2 - random  //может быть конструктором по умолчанию
     BF(const char* str); //может быть не 2**n длина, нужен контроль
+    BF(const BF& in_other);
     ~BF()
     {
         if (func) {
@@ -24,7 +25,7 @@ public:
 
 private:
     int n, nw;  //nw - колво байт, n - бит
-    unsigned int* func;
+    uint32_t * func;
 
     void initialize(int nn, const int type);
     uint32_t generateRandomFunc();
@@ -35,54 +36,37 @@ BF::BF(int nn, const int type) {
 }
 
 BF::BF(const char* str) {
-    // подсчет длины строки
-    int len = 0;
-    while (str[len] != '\0') {  //"10101001/n"
-        ++len;      //переделать без счетчика
-    }
+    int len = strlen(str);
 
-    // Проверка равенства длины степени
     if (len & (len - 1)) {
-        std::puts("Error");
+        std::puts("Error: Length must be a power of 2.");
         std::exit(1);
     }
 
-    // Инициализация переменных
     n = len;
-    nw = ((1 << n) + 31) >> 5;
-    func = new unsigned int[nw];
+    nw = len / 32 + (len % 32 != 0);
+    func = new uint32_t[nw];
 
-    // Копирование битов из строки
     int index = 0;
     for (int i = 0; i < len; ++i) {
-        if (str[i] == '0') {
-            func[index / 32] &= ~(1 << (index % 32));
-        }
-        else if (str[i] == '1') {
+        if (str[i] == '1') {
             func[index / 32] |= 1 << (index % 32);
         }
-        else {
-            std::cerr << "Invalid character in input string.\n";
-            delete[] func;
-            std::exit(1);
-        }
         ++index;
+    }
+
+    // Fill remaining bits with zeros
+    for (int i = index; i < nw * 32; ++i) {
+        func[i / 32] &= ~(1 << (i % 32));
     }
 }
 
 void BF::initialize(int nn, const int type) {
     n = nn;
     //nw = n / 8 + bool(n % 8);
-    if (n <= 5)
-    {
-        nw = 1;
-    }
-    else if (n > 5)
-    {
-        nw = pow(2,n - 1);
-    }
-    //nw = ((1 << n) + 31) >> 5;
-    func = new unsigned int[nw];
+
+    nw = ((1 << n) + 31) >> 5;
+    func = new uint32_t[nw];
 
     if (type == 0) {
         uint32_t mask = 0;
@@ -94,39 +78,46 @@ void BF::initialize(int nn, const int type) {
         /*for (int i = 0; i < nw; ++i) {
             func[i] = UINT_MAX;
         }*/
-        int bits = pow(2, n);
+        int bits = 1 << n; //int bits = pow(2, n);
         uint32_t mask = 0;
         mask = ~mask;
         int count = 0;
-        for (; bits > 32, bits = bits - 32;)
+        for (; bits >= 32; bits -= 32) 
         {
-            func[count] = mask;
+            func[count++] = mask;
         }
-        mask = (uint32_t)bits;  //fix this method
+        mask = (1 << bits) - 1; //mask = bits;  //fix this method
         func[count] = mask;
         
     }
     else if (type == 2) {
-        int bits = pow(2, n);
+        int bits = 1 << n;  
+        //int bits = pow(2, n);
         int count = 0;
-        for (; bits > 32, bits = bits - 32;)
+        for (; bits > 32; bits -= 32)
         {
-            (uint32_t)func[count] = generateRandomFunc; //fix this construction
+            func[count++] = generateRandomFunc(); //fix this construction
         }
-        (uint32_t)func[count] = generateRandomFunc();   //сместить и вернуть, чтобы незнач нули появились вместо случайных чисел
+        func[count] = generateRandomFunc();
+        /*  
+        uint32_t mask = 0;
+        for (int i = 0; i < n % 32; ++i) {
+            mask |= 1 << i;
+        }
+        func[nw - 1] = generateRandomFunc();
+        func[nw - 1] &= mask;
+        */
     }
     else {
         std::cerr << "Invalid type.\n";
-        delete[] func;
+        //delete[] func;
         std::exit(1);
     }
 }
 
 uint32_t BF::generateRandomFunc() {
-    for (int i = 0; i < nw; ++i) {
-        uint32_t mask = rand();
-        func[i] = mask;
-    }
+    uint32_t mask = rand() - rand(); // Added initialization
+    return mask; // Added return statement
 }
 
 int BF::weigth() {
@@ -179,7 +170,7 @@ BF::BF(const BF& in_other) {    //test this fragment code
     nw = in_other.nw;
     func = new uint32_t[nw]();
 
-    for (uint32_t i = 0; i < nw; ++i) {
+    for (int i = 0; i < nw; ++i) {
         func[i] = in_other.func[i];
     }
 }
@@ -187,11 +178,11 @@ BF::BF(const BF& in_other) {    //test this fragment code
 int main() {
     srand(time(0));
 
-    BF b1(2, 1); // Создаем объект с 8 битами и случайными значениями
+    BF b1(2, 2); // Создаем объект с 8 битами и случайными значениями
     std::cout << "Weight of b1: " << b1.weigth() << std::endl;
     std::cout << "b1: " << b1 << std::endl;
 
-    BF b2("10101010"); // Создаем объект из строки
+    BF b2("10111011000000000000000000000000"); // Создаем объект из строки
     std::cout << "Weight of b2: " << b2.weigth() << std::endl;
     std::cout << "b2: " << b2 << std::endl;
 

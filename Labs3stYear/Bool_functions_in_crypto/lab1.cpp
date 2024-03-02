@@ -14,7 +14,7 @@ public:
     BF(const BF& in_other);
     ~BF()
     {
-        if (func) 
+        if (func)
         {
             delete[] func;
         }
@@ -27,8 +27,6 @@ public:
     int weigth(); //подсчет веса вектора с помощью отнятия единицы и конъюнкции с оригиналом
     int get_n();
     void test_generate_weight();
-    void mobius_transform();
-    bool isEqual(const BF& other) const;
 
 private:
     int n, nw;  //nw - колво байт, n - бит
@@ -38,16 +36,16 @@ private:
     uint32_t generateRandomFunc();
 };
 
-BF::BF(int nn, const int type) 
+BF::BF(int nn, const int type)
 {
     initialize(nn, type);
 }
 
-BF::BF(const char* str) 
+BF::BF(const char* str)
 {
     int len = strlen(str);
 
-    if (len & (len - 1)) 
+    if (len & (len - 1))
     {
         std::puts("Error: Length must be a power of 2.");
         std::exit(1);
@@ -58,7 +56,7 @@ BF::BF(const char* str)
     func = new uint32_t[nw];
 
     int index = 0;
-    for (int i = len - 1; i >= 0; --i) 
+    for (int i = len - 1; i >= 0; --i)
     {
         if (str[i] == '1') {
             func[index / 32] |= 1 << (index % 32);
@@ -72,7 +70,7 @@ BF::BF(const char* str)
     }
 }
 
-void BF::initialize(int nn, const int type) 
+void BF::initialize(int nn, const int type)
 {
     n = nn;
     //nw = n / 8 + bool(n % 8);
@@ -80,10 +78,10 @@ void BF::initialize(int nn, const int type)
     nw = ((unsigned int)(1 << n) + 31) >> 5;  //[2**n / 32]
     func = new uint32_t[nw];
 
-    if (type == 0) 
+    if (type == 0)
     {
         uint32_t mask = 0;
-        for (int i = 0; i < nw; ++i) 
+        for (int i = 0; i < nw; ++i)
         {
             func[i] = mask;     //test this fragment code
         }
@@ -104,7 +102,7 @@ void BF::initialize(int nn, const int type)
         func[count] = mask;
 
     }
-    else if (type == 2) 
+    else if (type == 2)
     {
         int bits = 1 << n;
         //int bits = pow(2, n);
@@ -136,7 +134,7 @@ void BF::initialize(int nn, const int type)
         //}
 
     }
-    else 
+    else
     {
         std::cerr << "Invalid type.\n";
         //delete[] func;
@@ -144,16 +142,16 @@ void BF::initialize(int nn, const int type)
     }
 }
 
-uint32_t BF::generateRandomFunc() 
+uint32_t BF::generateRandomFunc()
 {
     unsigned int mask = rand() - rand(); // Added initialization
     return mask; // Added return statement
 }
 
-int BF::weigth() 
+int BF::weigth()
 {
     int weight = 0;
-    for (int i = 0; i < nw; ++i) 
+    for (int i = 0; i < nw; ++i)
     {
         unsigned int temp = func[i];
         while (temp != 0) {
@@ -168,11 +166,11 @@ std::ostream& operator<<(std::ostream& in_out, const BF& in_bfunc)
 {
     bool significant_bit_found = false; // флаг для определения, был ли найден значимый бит
 
-    for (int i = in_bfunc.nw - 1; i >= 0; --i) 
+    for (int i = in_bfunc.nw - 1; i >= 0; --i)
     { // начинаем с последнего слова
-        for (int n = 31; n >= 0; --n) 
+        for (int n = 31; n >= 0; --n)
         { // начинаем с младшего бита в слове
-            if (((1 << n) & in_bfunc.func[i]) || significant_bit_found) 
+            if (((1 << n) & in_bfunc.func[i]) || significant_bit_found)
             {
                 in_out << (((1 << n) & in_bfunc.func[i]) ? '1' : '0');
                 significant_bit_found = true; // устанавливаем флаг, если найден значимый бит
@@ -185,17 +183,17 @@ std::ostream& operator<<(std::ostream& in_out, const BF& in_bfunc)
     return in_out;
 }
 
-std::istream& operator>>(std::istream& is, BF& bf) 
+std::istream& operator>>(std::istream& is, BF& bf)
 {
     char buffer;
     int index = 0;
-    while (is >> buffer) 
+    while (is >> buffer)
     {
-        if (buffer == '0') 
+        if (buffer == '0')
         {
             bf.func[index / 32] &= ~(1 << (index % 32));
         }
-        else if (buffer == '1') 
+        else if (buffer == '1')
         {
             bf.func[index / 32] |= 1 << (index % 32);
         }
@@ -208,14 +206,14 @@ std::istream& operator>>(std::istream& is, BF& bf)
     return is;
 }
 
-BF::BF(const BF& in_other) 
-{    
+BF::BF(const BF& in_other)
+{
     n = in_other.n;
     uint32_t bits = 1 << n; //pow(2,n);
     nw = in_other.nw;
     func = new uint32_t[nw]();
 
-    for (int i = 0; i < nw; ++i) 
+    for (int i = 0; i < nw; ++i)
     {
         func[i] = in_other.func[i];
     }
@@ -226,44 +224,6 @@ int BF::get_n()
     return n;
 }
 
-void BF::mobius_transform()
-{
-    uint32_t mask1 = 0xAA;
-    uint32_t mask2 = 0xCC;
-    uint32_t mask3 = 0xF0;
-    uint32_t mask4 = 0xFF;
-    uint32_t mask5 = 0xFFFF;
-
-    int bits = 1 << n;
-
-    for (int i = 0; i < nw; ++i) 
-    {
-        uint32_t g = func[i];
-        g = g ^ ((g << 1) & mask1);
-        g = g ^ ((g << 2) & mask2);
-        g = g ^ ((g << 4) & mask3);
-        g = g ^ ((g << 8) & mask4);
-        g = g ^ ((g << 16) & mask5);
-        func[i] = g;
-    }
-
-    func[nw - 1] <<= 32 - bits;
-    func[nw - 1] >>= 32 - bits;
-}
-
-bool BF::isEqual(const BF& other) const 
-{
-    if (n != other.n)
-        return false;
-
-    for (int i = 0; i < nw; ++i) 
-    {
-        if (func[i] != other.func[i])
-            return false;
-    }
-
-    return true;
-}
 
 void test_generate_weight()
 {
@@ -280,25 +240,11 @@ void test_generate_weight()
     }
 }
 
-int main() 
+int main()
 {
     srand(time(NULL));
-    
-    //test_generate_weight();     //тест на создание случайного вектора с высчитыванием веса
 
-    BF b(7, 2); // Создание объекта с 32 битами и случайными значениями
-    BF b1(b);
-
-    std::cout << "b before Mobius transform : " << b << std::endl;
-
-    b1.mobius_transform();
-    std::cout << "b1 after 1 Mobius transform : " << b1 << std::endl;
-    b1.mobius_transform();
-    std::cout << "b1 after 2 Mobius transforms: " << b1 << std::endl;
-
-    std::cout << "b and b1 are equal: " << (b.isEqual(b1) ? "true" : "false") << std::endl;     // Проверка на равенство
-
-    return 0;
+    test_generate_weight();     //тест на создание случайного вектора с высчитыванием веса
     /*
     BF b2("11"); // Создаем объект из строки
     std::cout << std::endl << "Weight of b2: " << b2.weigth() << std::endl;

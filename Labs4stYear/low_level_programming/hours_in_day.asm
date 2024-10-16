@@ -64,3 +64,5 @@ print_newline:
 
 section .data
     newline db 10
+
+;nasm -f elf32 -o hours_in_day.o hours_in_day.asm; ld -m elf_i386 -o hours_in_day hours_in_day.o

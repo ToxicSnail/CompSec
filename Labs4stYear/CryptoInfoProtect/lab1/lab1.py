@@ -73,9 +73,9 @@ def meet_in_the_middle_attack(M, C, filtered_keys=None):
     for k1 in possible_keys:
         k1_1, k1_2 = key_schedule(k1)
         Y1 = encrypt(M, k1_1, k1_2)
-        Y1 = tuple(Y1) 
+        Y1 = tuple(Y1)
         if Y1 not in y1:
-            y1[Y1] = list()
+            y1[Y1] = []
         y1[Y1].append(k1)
 
     # Y2 = S-DES^-1(C, K2)
@@ -87,28 +87,32 @@ def meet_in_the_middle_attack(M, C, filtered_keys=None):
         if Y2 in y1:
             candidates.append((y1[Y2], k2))
 
-    # перезапускаем атаку с новым случайным M'
-    while len(candidates) > 1:
-        
-        M_prime = [random.randint(0, 1) for _ in range(8)]
-        print(f" New random plaintext: {M_prime}")
+    print(f"\nInitial number of candidate key pairs: {len(candidates)}")
 
+    # Фильтрация кандидатов при необходимости
+    iteration = 1
+    while len(candidates) > 1:
+        print(f"\nIteration {iteration}: Filtering candidates...")
+        M_prime = [random.randint(0, 1) for _ in range(8)]
         C_prime = encrypt(encrypt(M_prime, key_schedule(key1)[0], key_schedule(key1)[1]),
-            key_schedule(key2)[0], key_schedule(key2)[1])
+                          key_schedule(key2)[0], key_schedule(key2)[1])
+
+        print(f"Using new plaintext (M'): {M_prime}")
+        print(f"Corresponding ciphertext (C'): {C_prime}")
 
         filtered_candidates = []
         for k1_list, k2 in candidates:
-            k1_set = []
-            for k1 in k1_list:
-                if validate_keys(M_prime, C_prime, k1, k2):
-                    k1_set.append(k1)
-            if len(k1_set) > 0:
+            k1_set = [k1 for k1 in k1_list if validate_keys(M_prime, C_prime, k1, k2)]
+            if k1_set:
                 filtered_candidates.append([k1_set, k2])
 
-        if len(filtered_candidates) == 1:
-            return filtered_candidates[0]
-        
         candidates = filtered_candidates
+        print(f"Number of remaining candidates after iteration {iteration}: {len(candidates)}")
+        if len(candidates) == 1:
+            break
+
+        iteration += 1
+
     return candidates[0] if candidates else None
 
 def validate_keys(M, C, k1, k2):

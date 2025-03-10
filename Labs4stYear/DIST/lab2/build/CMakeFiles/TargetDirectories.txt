@@ -1,0 +1,9 @@
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles/rebuild_cache.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator/CMakeFiles/allocator.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator/CMakeFiles/AllocatorApp.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator/CMakeFiles/rebuild_cache.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/my_test_project/CMakeFiles/my_test_project.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/my_test_project/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/my_test_project/CMakeFiles/rebuild_cache.dir

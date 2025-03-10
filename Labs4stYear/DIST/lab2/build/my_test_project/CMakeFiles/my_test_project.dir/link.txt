@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/my_test_project.dir/main.cpp.o -o my_test_project  ../allocator/liballocator.a 

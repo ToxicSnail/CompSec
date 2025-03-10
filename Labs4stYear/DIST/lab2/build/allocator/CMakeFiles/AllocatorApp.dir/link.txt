@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/AllocatorApp.dir/Allocator.cpp.o CMakeFiles/AllocatorApp.dir/main.cpp.o -o AllocatorApp 

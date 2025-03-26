@@ -1,8 +1,8 @@
 allocator/CMakeFiles/allocator.dir/Allocator.cpp.o: \
- /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp \
+ /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp \
  /usr/include/stdc-predef.h \
- /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.h \
- /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/DataTypes.h \
+ /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.h \
+ /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/DataTypes.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/new \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

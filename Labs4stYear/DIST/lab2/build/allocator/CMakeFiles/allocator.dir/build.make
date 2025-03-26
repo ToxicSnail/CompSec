@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2
+CMAKE_SOURCE_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build
+CMAKE_BINARY_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build
 
 # Include any dependencies generated for this target.
 include allocator/CMakeFiles/allocator.dir/depend.make
@@ -70,18 +70,18 @@ include allocator/CMakeFiles/allocator.dir/progress.make
 include allocator/CMakeFiles/allocator.dir/flags.make
 
 allocator/CMakeFiles/allocator.dir/Allocator.cpp.o: allocator/CMakeFiles/allocator.dir/flags.make
-allocator/CMakeFiles/allocator.dir/Allocator.cpp.o: /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp
+allocator/CMakeFiles/allocator.dir/Allocator.cpp.o: /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp
 allocator/CMakeFiles/allocator.dir/Allocator.cpp.o: allocator/CMakeFiles/allocator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object allocator/CMakeFiles/allocator.dir/Allocator.cpp.o"
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT allocator/CMakeFiles/allocator.dir/Allocator.cpp.o -MF CMakeFiles/allocator.dir/Allocator.cpp.o.d -o CMakeFiles/allocator.dir/Allocator.cpp.o -c /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object allocator/CMakeFiles/allocator.dir/Allocator.cpp.o"
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT allocator/CMakeFiles/allocator.dir/Allocator.cpp.o -MF CMakeFiles/allocator.dir/Allocator.cpp.o.d -o CMakeFiles/allocator.dir/Allocator.cpp.o -c /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp
 
 allocator/CMakeFiles/allocator.dir/Allocator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/allocator.dir/Allocator.cpp.i"
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp > CMakeFiles/allocator.dir/Allocator.cpp.i
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp > CMakeFiles/allocator.dir/Allocator.cpp.i
 
 allocator/CMakeFiles/allocator.dir/Allocator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/allocator.dir/Allocator.cpp.s"
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp -o CMakeFiles/allocator.dir/Allocator.cpp.s
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp -o CMakeFiles/allocator.dir/Allocator.cpp.s
 
 # Object files for target allocator
 allocator_OBJECTS = \
@@ -93,19 +93,19 @@ allocator_EXTERNAL_OBJECTS =
 allocator/liballocator.a: allocator/CMakeFiles/allocator.dir/Allocator.cpp.o
 allocator/liballocator.a: allocator/CMakeFiles/allocator.dir/build.make
 allocator/liballocator.a: allocator/CMakeFiles/allocator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library liballocator.a"
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && $(CMAKE_COMMAND) -P CMakeFiles/allocator.dir/cmake_clean_target.cmake
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/allocator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library liballocator.a"
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && $(CMAKE_COMMAND) -P CMakeFiles/allocator.dir/cmake_clean_target.cmake
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/allocator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 allocator/CMakeFiles/allocator.dir/build: allocator/liballocator.a
 .PHONY : allocator/CMakeFiles/allocator.dir/build
 
 allocator/CMakeFiles/allocator.dir/clean:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator && $(CMAKE_COMMAND) -P CMakeFiles/allocator.dir/cmake_clean.cmake
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator && $(CMAKE_COMMAND) -P CMakeFiles/allocator.dir/cmake_clean.cmake
 .PHONY : allocator/CMakeFiles/allocator.dir/clean
 
 allocator/CMakeFiles/allocator.dir/depend:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/toxicsnail/Code/GCC/DIST/DIST_lab2 /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator/CMakeFiles/allocator.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2 /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator/CMakeFiles/allocator.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : allocator/CMakeFiles/allocator.dir/depend
 

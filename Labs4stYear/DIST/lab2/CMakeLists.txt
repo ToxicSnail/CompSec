@@ -5,4 +5,6 @@ project(MyAllocatorTest)
 add_subdirectory(allocator)
 
 # Добавляем поддиректорию с тестовым проектом
-add_subdirectory(my_test_project)
+#add_subdirectory(my_test_project)
+
+add_subdirectory(SAT_DPLL)

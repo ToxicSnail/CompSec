@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/Allocator.cpp" "allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o" "gcc" "allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o.d"
-  "/home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator/main.cpp" "allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o" "gcc" "allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o.d"
+  "/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/Allocator.cpp" "allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o" "gcc" "allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o.d"
+  "/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator/main.cpp" "allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o" "gcc" "allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

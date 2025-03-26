@@ -54,28 +54,45 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2
+CMAKE_SOURCE_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build
+CMAKE_BINARY_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: allocator/all
-all: my_test_project/all
+all: SAT_DPLL/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: allocator/preinstall
-preinstall: my_test_project/preinstall
+preinstall: SAT_DPLL/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: allocator/clean
-clean: my_test_project/clean
+clean: SAT_DPLL/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory SAT_DPLL
+
+# Recursive "all" directory target.
+SAT_DPLL/all: SAT_DPLL/CMakeFiles/sat_dpll.dir/all
+.PHONY : SAT_DPLL/all
+
+# Recursive "preinstall" directory target.
+SAT_DPLL/preinstall:
+.PHONY : SAT_DPLL/preinstall
+
+# Recursive "clean" directory target.
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+SAT_DPLL/clean: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
+.PHONY : SAT_DPLL/clean
 
 #=============================================================================
 # Directory level rules for directory allocator
@@ -95,35 +112,20 @@ allocator/clean: allocator/CMakeFiles/AllocatorApp.dir/clean
 .PHONY : allocator/clean
 
 #=============================================================================
-# Directory level rules for directory my_test_project
-
-# Recursive "all" directory target.
-my_test_project/all: my_test_project/CMakeFiles/my_test_project.dir/all
-.PHONY : my_test_project/all
-
-# Recursive "preinstall" directory target.
-my_test_project/preinstall:
-.PHONY : my_test_project/preinstall
-
-# Recursive "clean" directory target.
-my_test_project/clean: my_test_project/CMakeFiles/my_test_project.dir/clean
-.PHONY : my_test_project/clean
-
-#=============================================================================
 # Target rules for target allocator/CMakeFiles/allocator.dir
 
 # All Build rule for target.
 allocator/CMakeFiles/allocator.dir/all:
 	$(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/depend
 	$(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles --progress-num=4,5 "Built target allocator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=4,5 "Built target allocator"
 .PHONY : allocator/CMakeFiles/allocator.dir/all
 
 # Build rule for subdir invocation for target.
 allocator/CMakeFiles/allocator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/allocator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
 .PHONY : allocator/CMakeFiles/allocator.dir/rule
 
 # Convenience name for target.
@@ -142,14 +144,14 @@ allocator/CMakeFiles/allocator.dir/clean:
 allocator/CMakeFiles/AllocatorApp.dir/all:
 	$(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles --progress-num=1,2,3 "Built target AllocatorApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=1,2,3 "Built target AllocatorApp"
 .PHONY : allocator/CMakeFiles/AllocatorApp.dir/all
 
 # Build rule for subdir invocation for target.
 allocator/CMakeFiles/AllocatorApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/AllocatorApp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
 .PHONY : allocator/CMakeFiles/AllocatorApp.dir/rule
 
 # Convenience name for target.
@@ -162,30 +164,84 @@ allocator/CMakeFiles/AllocatorApp.dir/clean:
 .PHONY : allocator/CMakeFiles/AllocatorApp.dir/clean
 
 #=============================================================================
-# Target rules for target my_test_project/CMakeFiles/my_test_project.dir
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll.dir
 
 # All Build rule for target.
-my_test_project/CMakeFiles/my_test_project.dir/all: allocator/CMakeFiles/allocator.dir/all
-	$(MAKE) $(MAKESILENT) -f my_test_project/CMakeFiles/my_test_project.dir/build.make my_test_project/CMakeFiles/my_test_project.dir/depend
-	$(MAKE) $(MAKESILENT) -f my_test_project/CMakeFiles/my_test_project.dir/build.make my_test_project/CMakeFiles/my_test_project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles --progress-num=6,7 "Built target my_test_project"
-.PHONY : my_test_project/CMakeFiles/my_test_project.dir/all
+SAT_DPLL/CMakeFiles/sat_dpll.dir/all: allocator/CMakeFiles/allocator.dir/all
+SAT_DPLL/CMakeFiles/sat_dpll.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+SAT_DPLL/CMakeFiles/sat_dpll.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13 "Built target sat_dpll"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/all
 
 # Build rule for subdir invocation for target.
-my_test_project/CMakeFiles/my_test_project.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test_project/CMakeFiles/my_test_project.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 0
-.PHONY : my_test_project/CMakeFiles/my_test_project.dir/rule
+SAT_DPLL/CMakeFiles/sat_dpll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/rule
 
 # Convenience name for target.
-my_test_project: my_test_project/CMakeFiles/my_test_project.dir/rule
-.PHONY : my_test_project
+sat_dpll: SAT_DPLL/CMakeFiles/sat_dpll.dir/rule
+.PHONY : sat_dpll
 
 # clean rule for target.
-my_test_project/CMakeFiles/my_test_project.dir/clean:
-	$(MAKE) $(MAKESILENT) -f my_test_project/CMakeFiles/my_test_project.dir/build.make my_test_project/CMakeFiles/my_test_project.dir/clean
-.PHONY : my_test_project/CMakeFiles/my_test_project.dir/clean
+SAT_DPLL/CMakeFiles/sat_dpll.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll.dir/clean
+
+#=============================================================================
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all: allocator/CMakeFiles/allocator.dir/all
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num= "Built target sat_dpll_autogen_timestamp_deps"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+sat_dpll_autogen_timestamp_deps: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/rule
+.PHONY : sat_dpll_autogen_timestamp_deps
+
+# clean rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir
+
+# All Build rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all: SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles --progress-num=14 "Built target sat_dpll_autogen"
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule
+
+# Convenience name for target.
+sat_dpll_autogen: SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/rule
+.PHONY : sat_dpll_autogen
+
+# clean rule for target.
+SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
+.PHONY : SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

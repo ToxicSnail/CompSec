@@ -1,4 +1,4 @@
-# Install script for directory: /home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator
+# Install script for directory: /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

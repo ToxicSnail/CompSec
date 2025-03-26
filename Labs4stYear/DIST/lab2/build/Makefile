@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2
+CMAKE_SOURCE_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build
+CMAKE_BINARY_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,17 +143,43 @@ AllocatorApp/fast:
 .PHONY : AllocatorApp/fast
 
 #=============================================================================
-# Target rules for targets named my_test_project
+# Target rules for targets named sat_dpll
 
 # Build rule for target.
-my_test_project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test_project
-.PHONY : my_test_project
+sat_dpll: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll
+.PHONY : sat_dpll
 
 # fast build rule for target.
-my_test_project/fast:
-	$(MAKE) $(MAKESILENT) -f my_test_project/CMakeFiles/my_test_project.dir/build.make my_test_project/CMakeFiles/my_test_project.dir/build
-.PHONY : my_test_project/fast
+sat_dpll/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll.dir/build
+.PHONY : sat_dpll/fast
+
+#=============================================================================
+# Target rules for targets named sat_dpll_autogen_timestamp_deps
+
+# Build rule for target.
+sat_dpll_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll_autogen_timestamp_deps
+.PHONY : sat_dpll_autogen_timestamp_deps
+
+# fast build rule for target.
+sat_dpll_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir/build
+.PHONY : sat_dpll_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sat_dpll_autogen
+
+# Build rule for target.
+sat_dpll_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sat_dpll_autogen
+.PHONY : sat_dpll_autogen
+
+# fast build rule for target.
+sat_dpll_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build.make SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir/build
+.PHONY : sat_dpll_autogen/fast
 
 # Help Target
 help:
@@ -163,9 +189,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sat_dpll_autogen"
+	@echo "... sat_dpll_autogen_timestamp_deps"
 	@echo "... AllocatorApp"
 	@echo "... allocator"
-	@echo "... my_test_project"
+	@echo "... sat_dpll"
 .PHONY : help
 
 

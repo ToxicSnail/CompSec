@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/toxicsnail/Code/GCC/DIST/DIST_lab2/allocator
+CXX_INCLUDES = -I/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/allocator
 
 CXX_FLAGS = 
 

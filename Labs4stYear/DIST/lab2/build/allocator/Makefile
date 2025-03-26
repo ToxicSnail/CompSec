@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2
+CMAKE_SOURCE_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build
+CMAKE_BINARY_DIR = /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/allocator//CMakeFiles/progress.marks
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build/CMakeFiles 0
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator//CMakeFiles/progress.marks
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/clean
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/preinstall
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/preinstall
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 allocator/CMakeFiles/allocator.dir/rule:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/allocator.dir/rule
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/allocator.dir/rule
 .PHONY : allocator/CMakeFiles/allocator.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ allocator: allocator/CMakeFiles/allocator.dir/rule
 
 # fast build rule for target.
 allocator/fast:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/build
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/build
 .PHONY : allocator/fast
 
 # Convenience name for target.
 allocator/CMakeFiles/AllocatorApp.dir/rule:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/AllocatorApp.dir/rule
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator/CMakeFiles/AllocatorApp.dir/rule
 .PHONY : allocator/CMakeFiles/AllocatorApp.dir/rule
 
 # Convenience name for target.
@@ -141,7 +141,7 @@ AllocatorApp: allocator/CMakeFiles/AllocatorApp.dir/rule
 
 # fast build rule for target.
 AllocatorApp/fast:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/build
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/build
 .PHONY : AllocatorApp/fast
 
 Allocator.o: Allocator.cpp.o
@@ -149,8 +149,8 @@ Allocator.o: Allocator.cpp.o
 
 # target to build an object file
 Allocator.cpp.o:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.o
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.o
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.o
 .PHONY : Allocator.cpp.o
 
 Allocator.i: Allocator.cpp.i
@@ -158,8 +158,8 @@ Allocator.i: Allocator.cpp.i
 
 # target to preprocess a source file
 Allocator.cpp.i:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.i
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.i
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.i
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.i
 .PHONY : Allocator.cpp.i
 
 Allocator.s: Allocator.cpp.s
@@ -167,8 +167,8 @@ Allocator.s: Allocator.cpp.s
 
 # target to generate assembly for a file
 Allocator.cpp.s:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.s
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.s
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/allocator.dir/build.make allocator/CMakeFiles/allocator.dir/Allocator.cpp.s
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/Allocator.cpp.s
 .PHONY : Allocator.cpp.s
 
 main.o: main.cpp.o
@@ -176,7 +176,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -184,7 +184,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.i
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -192,7 +192,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.s
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(MAKE) $(MAKESILENT) -f allocator/CMakeFiles/AllocatorApp.dir/build.make allocator/CMakeFiles/AllocatorApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -222,6 +222,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/toxicsnail/Code/GCC/DIST/DIST_lab2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

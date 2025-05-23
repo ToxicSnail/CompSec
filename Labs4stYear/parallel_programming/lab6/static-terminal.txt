@@ -1,0 +1,257 @@
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_SCHEDULE="static,1"
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=1
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.029877 sec (threads = 1)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=2
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.017362 sec (threads = 2)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=3
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013854 sec (threads = 3)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=4
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.010574 sec (threads = 4)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=5
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.010056 sec (threads = 5)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=6
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.008145 sec (threads = 6)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=7
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009873 sec (threads = 7)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009487 sec (threads = 7)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=8
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.010008 sec (threads = 8)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=9
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009041 sec (threads = 9)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=10
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.008355 sec (threads = 10)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=11
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009274 sec (threads = 11)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=12
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007911 sec (threads = 12)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=13
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007031 sec (threads = 13)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=14
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013854 sec (threads = 14)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007705 sec (threads = 14)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.006649 sec (threads = 14)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=15
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014527 sec (threads = 15)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014793 sec (threads = 15)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.006403 sec (threads = 15)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=16
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005825 sec (threads = 16)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=17
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.006901 sec (threads = 17)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014107 sec (threads = 17)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005476 sec (threads = 17)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=18
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014004 sec (threads = 18)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.008272 sec (threads = 18)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014511 sec (threads = 18)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013649 sec (threads = 18)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005772 sec (threads = 18)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=19
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007455 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009873 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005865 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.006377 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013738 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.006466 sec (threads = 19)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=20
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.008287 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014979 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014746 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007460 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014135 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.008372 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.016647 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013655 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005531 sec (threads = 20)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=21
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014962 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013566 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009590 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014283 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014120 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014385 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.005942 sec (threads = 21)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=22
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.016310 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.011044 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013543 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013319 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013717 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.016880 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.015683 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.015452 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013303 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014558 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.015399 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013404 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ 
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.007343 sec (threads = 22)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=23
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.014888 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013175 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.013368 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.021723 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.018215 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.022088 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.015694 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.010731 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.019683 sec (threads = 23)
+gr932125@gpu-node001:~/Gorky/lab6$ export OMP_NUM_THREADS=24
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.012335 sec (threads = 24)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.009995 sec (threads = 24)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.020040 sec (threads = 24)
+gr932125@gpu-node001:~/Gorky/lab6$ ./integrate
+Final integral value     = 0.6067849052
+OpenMP computation time  = 0.016226 sec (threads = 24)

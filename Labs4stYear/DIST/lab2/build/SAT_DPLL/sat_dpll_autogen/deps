@@ -1,0 +1,21 @@
+sat_dpll_autogen/timestamp: \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/BBV.cpp \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/BBV.h \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/CMakeLists.txt \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/MinOccurenceBranchingStrategy.cpp \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/MinOccurenceBranchingStrategy.h \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/boolequation.cpp \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/boolequation.h \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/boolinterval.cpp \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/boolinterval.h \
+	/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/SAT_DPLL/main.cpp \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
+	/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake \
+	/usr/bin/cmake

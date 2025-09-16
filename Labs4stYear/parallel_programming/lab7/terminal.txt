@@ -1,0 +1,202 @@
+gr932125@gpu-node001:~/Gorky/lab7$ gcc -O2 -fopenmp test.c -o test -lm
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_SCHEDULE="dynamic,500"
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=1
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=1, schedule=dynamic, chunk=500, reps=3
+T_ser=9.650171
+T_ikj=9.652584
+T_kij=11.057765
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=2
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=2, schedule=dynamic, chunk=500, reps=3
+T_ser=10.046681
+T_ikj=5.712647
+T_kij=6.588868
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=3
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=3, schedule=dynamic, chunk=500, reps=3
+T_ser=9.967057
+T_ikj=5.209515
+T_kij=6.973571
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=4
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=4, schedule=dynamic, chunk=500, reps=3
+T_ser=10.254815
+T_ikj=3.179953
+T_kij=5.189754
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=5
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=5, schedule=dynamic, chunk=500, reps=3
+T_ser=10.056902
+T_ikj=3.923989
+T_kij=5.619559
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=6
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=6, schedule=dynamic, chunk=500, reps=3
+T_ser=10.071264
+T_ikj=4.444496
+T_kij=6.225177
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=7
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=7, schedule=dynamic, chunk=500, reps=3
+T_ser=10.030325
+T_ikj=4.219875
+T_kij=5.766481
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=8
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=8, schedule=dynamic, chunk=500, reps=3
+T_ser=10.142571
+T_ikj=4.089168
+T_kij=6.322220
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=9
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=9, schedule=dynamic, chunk=500, reps=3
+T_ser=10.233328
+T_ikj=4.365617
+T_kij=6.315070
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=10
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=10, schedule=dynamic, chunk=500, reps=3
+T_ser=9.944341
+T_ikj=4.256292
+T_kij=6.472330
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=11
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=11, schedule=dynamic, chunk=500, reps=3
+T_ser=9.763535
+T_ikj=4.364845
+T_kij=6.559262
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=12
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=12, schedule=dynamic, chunk=500, reps=3
+T_ser=9.808379
+T_ikj=4.482360
+T_kij=7.060927
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=13
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=13, schedule=dynamic, chunk=500, reps=3
+T_ser=10.228947
+T_ikj=4.322393
+T_kij=6.962418
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=14
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=14, schedule=dynamic, chunk=500, reps=3
+T_ser=9.920644
+T_ikj=4.333220
+T_kij=7.137186
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=15
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=15, schedule=dynamic, chunk=500, reps=3
+T_ser=9.757673
+T_ikj=4.152506
+T_kij=6.880193
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=16
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=16, schedule=dynamic, chunk=500, reps=3
+T_ser=10.420943
+T_ikj=4.373700
+T_kij=7.214105
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=17
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=17, schedule=dynamic, chunk=500, reps=3
+T_ser=9.726776
+T_ikj=4.601739
+T_kij=8.126205
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=18
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=18, schedule=dynamic, chunk=500, reps=3
+T_ser=10.276539
+T_ikj=4.828617
+T_kij=8.722991
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=19
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=19, schedule=dynamic, chunk=500, reps=3
+T_ser=10.208279
+T_ikj=5.044902
+T_kij=9.592347
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=20
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=20, schedule=dynamic, chunk=500, reps=3
+T_ser=10.118002
+T_ikj=5.595478
+T_kij=9.799183
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=21
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=21, schedule=dynamic, chunk=500, reps=3
+T_ser=10.292425
+T_ikj=5.221130
+T_kij=10.481019
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=22
+gr932125@gpu-node001:~/Gorky/lab7$ ./test
+Config: n=2048, threads=22, schedule=dynamic, chunk=500, reps=3
+T_ser=10.368658
+T_ikj=5.079296
+T_kij=11.111425
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=23
+gr932125@gpu-node001:~/Gorky/lab7$ ./test 
+Config: n=2048, threads=23, schedule=dynamic, chunk=500, reps=3
+T_ser=10.123594
+T_ikj=6.170242
+T_kij=11.716644
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=24
+gr932125@gpu-node001:~/Gorky/lab7$ ./test 
+Config: n=2048, threads=24, schedule=dynamic, chunk=500, reps=3
+T_ser=10.541824
+T_ikj=5.416023
+T_kij=12.336294
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00
+gr932125@gpu-node001:~/Gorky/lab7$ export OMP_NUM_THREADS=25
+gr932125@gpu-node001:~/Gorky/lab7$ ./test 
+Config: n=2048, threads=25, schedule=dynamic, chunk=500, reps=3
+T_ser=9.822134
+T_ikj=6.950773
+T_kij=12.162804
+Err_ikj=0.000000e+00
+Err_kij=0.000000e+00

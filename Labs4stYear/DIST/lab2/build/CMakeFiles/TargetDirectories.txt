@@ -1,0 +1,11 @@
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/CMakeFiles/rebuild_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator/CMakeFiles/allocator.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator/CMakeFiles/AllocatorApp.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/allocator/CMakeFiles/rebuild_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/SAT_DPLL/CMakeFiles/sat_dpll.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/SAT_DPLL/CMakeFiles/edit_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/SAT_DPLL/CMakeFiles/rebuild_cache.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/SAT_DPLL/CMakeFiles/sat_dpll_autogen_timestamp_deps.dir
+/home/toxicsnail/Code/CompSec/Labs4stYear/DIST/lab2/build/SAT_DPLL/CMakeFiles/sat_dpll_autogen.dir

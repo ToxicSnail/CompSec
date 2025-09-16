@@ -1,0 +1,20 @@
+{
+  "alice": {
+    "last_hash": "24130824DB7E0DBC",
+    "seed": "990E",
+    "seq": 100,
+    "max_seq": 100
+  },
+  "administrator": {
+    "last_hash": "DC08FA43FE2AA295",
+    "seed": "DC88",
+    "seq": 100,
+    "max_seq": 100
+  },
+  "bob": {
+    "last_hash": "FBCB3162E7FCE635",
+    "seed": "F826",
+    "seq": 9,
+    "max_seq": 10
+  }
+}

@@ -17,7 +17,7 @@ def load_users():
                 data = json.load(fjson)
             except Exception:
                 return {}
-        # Migrate legacy keys if present
+        # Мигрируем старые ключи, если они присутствуют
         changed = False
         for u, rec in list(data.items()):
             if 'iterations' in rec or 'current_iteration' in rec:
@@ -43,17 +43,17 @@ class SKeyServer:
         self.host = host
         self.port = port
         self.users = load_users()
-        # Pending registrations: reg_id -> {username, seed, n, created_at}
+        # Ожидающие регистрации: reg_id -> {username, seed, n, created_at}
         self.pending = {}
         self.pending_lock = threading.Lock()
-        # Params
+        # Параметры сервера
         self.DEFAULT_SEQ = 10
         self.PENDING_MAX = 10
-        self.REG_TTL = 300  # seconds (5 minutes)
+        self.REG_TTL = 300  # секунды (5 минут)
         self._running = False
 
     def generate_seed(self) -> str:
-        # 4 random bytes -> 8 hex uppercase
+        # 4 случайных байта -> 8 шестнадцатеричных символов (верхний регистр)
         return secrets.token_hex(2).upper()
 
     def generate_reg_id(self) -> str:
@@ -103,7 +103,7 @@ class SKeyServer:
         except Exception:
             return False
 
-        # Apply one iteration and compare to stored last_hash
+        # Применяем одну итерацию и сравниваем с сохранённым last_hash
         test = f(value)
         try:
             stored = bytes.fromhex(u['last_hash'])
@@ -111,7 +111,7 @@ class SKeyServer:
             return False
 
         if test == stored:
-            # Update: store received value as new last_hash
+            # Обновление: сохраняем полученное значение как новый last_hash
             u['last_hash'] = to_hex64(value)
             u['seq'] = max(0, int(u['seq']) - 1)
             save_users(self.users)
@@ -177,7 +177,7 @@ class SKeyServer:
                     if username in self.users:
                         client_socket.sendall(b"User already exists\n")
                         continue
-                    # Create pending record
+                    # Создаём запись ожидающей регистрации
                     self.cleanup_pending(verbose=False)
                     with self.pending_lock:
                         if len(self.pending) >= self.PENDING_MAX:

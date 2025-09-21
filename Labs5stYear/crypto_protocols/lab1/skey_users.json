@@ -16,5 +16,11 @@
     "seed": "F826",
     "seq": 9,
     "max_seq": 10
+  },
+  "loh": {
+    "last_hash": "5801D861943B1E3C",
+    "seed": "8087",
+    "seq": 9,
+    "max_seq": 10
   }
 }

@@ -6,13 +6,11 @@ import secrets
 import time
 import sys
 
-# Ensure local imports work when run as `python lab2/server.py`
+# Чтобы локальные импорты работали при запуске через `python lab2/server.py`
 sys.path.insert(0, os.path.dirname(__file__))
 from chap import md5_chap_response, to_hex, from_hex, generate_challenge
 
-
 USERS_FILE = os.path.join(os.path.dirname(__file__), 'chap_users.json')
-
 
 def load_users():
     if os.path.exists(USERS_FILE):
@@ -23,23 +21,21 @@ def load_users():
             return {}
     return {}
 
-
 def save_users(users):
     os.makedirs(os.path.dirname(USERS_FILE), exist_ok=True)
     with open(USERS_FILE, 'w') as fjson:
         json.dump(users, fjson, indent=2)
 
-
 class ChapServer:
     def __init__(self, host='localhost', port=12345):
         self.host = host
         self.port = port
-        self.users = load_users()  # { username: {"secret": "..."} }
-        # pending[(username, id)] = { 'challenge': bytes, 'ts': float }
+        self.users = load_users()  # структура: { имя: {"secret": "..."} }
+        # pending[(имя, идентификатор)] = { 'challenge': bytes, 'ts': float }
         self.pending = {}
         self.pending_lock = threading.Lock()
         self.DEFAULT_CHL_LEN = 16
-        self.REG_TTL = 120  # seconds
+        self.REG_TTL = 120  # секунды
         self.MAX_PENDING = 100
         self._running = False
 
@@ -73,7 +69,7 @@ class ChapServer:
         identifier = secrets.randbelow(256)
         with self.pending_lock:
             if len(self.pending) >= self.MAX_PENDING:
-                # remove oldest
+                # удаляем самый старый челлендж
                 oldest = sorted(self.pending.items(), key=lambda kv: kv[1]['ts'])[0][0]
                 self.pending.pop(oldest, None)
             self.pending[(username, identifier)] = { 'challenge': challenge, 'ts': time.time() }
@@ -96,7 +92,7 @@ class ChapServer:
             return False
         expected = md5_chap_response(identifier, secret, rec['challenge'])
         ok = expected == response
-        # one-time per issued challenge
+        # одноразовая проверка для выданного челленджа
         with self.pending_lock:
             self.pending.pop(key, None)
         return ok
@@ -217,7 +213,6 @@ class ChapServer:
         finally:
             self._running = False
             sock.close()
-
 
 if __name__ == '__main__':
     ChapServer().start()

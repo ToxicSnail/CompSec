@@ -22,5 +22,17 @@
     "seed": "8087",
     "seq": 9,
     "max_seq": 10
+  },
+  "test": {
+    "last_hash": "41B2BCD6F847D17E",
+    "seed": "9CF9",
+    "seq": 8,
+    "max_seq": 10
+  },
+  "anya": {
+    "last_hash": "76198F4464F8B9D3",
+    "seed": "2456",
+    "seq": 9,
+    "max_seq": 10
   }
 }

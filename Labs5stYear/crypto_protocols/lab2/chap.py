@@ -3,7 +3,7 @@ import secrets
 
 
 def md5_chap_response(identifier: int, secret: str, challenge: bytes) -> bytes:
-    """RFC 1994: Response = MD5(Identifier || Secret || Challenge)"""
+    """RFC 1994: отклик = MD5(Identifier || Secret || Challenge)."""
     if not (0 <= identifier <= 255):
         raise ValueError("Identifier must be 0..255")
     id_byte = bytes([identifier & 0xFF])
@@ -36,4 +36,3 @@ def compute_client_response(identifier: int, secret: str, challenge_hex: str) ->
     ch = from_hex(challenge_hex)
     resp = md5_chap_response(identifier, secret, ch)
     return to_hex(resp)
-

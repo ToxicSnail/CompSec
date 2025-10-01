@@ -2,7 +2,7 @@ import argparse
 import os
 import sys
 
-# Ensure local imports work when run as `python lab2/client.py`
+# Чтобы локальные импорты работали при запуске через `python lab2/client.py`
 sys.path.insert(0, os.path.dirname(__file__))
 from chap import compute_client_response
 

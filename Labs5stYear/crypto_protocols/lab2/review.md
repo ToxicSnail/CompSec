@@ -3,15 +3,15 @@
 Сценарии проверки корректной работы.
 
 ## Пререквизиты
-- Инициализирован пользователь (офлайн): `python lab2/keyinit.py alice "pass phrase"`
-- Сервер запущен: `python lab2/server.py`
+- Инициализирован пользователь (офлайн): `python keyinit.py alice "pass phrase"`
+- Сервер запущен: `python server.py`
 - Подключение: `telnet localhost 12345` или `nc localhost 12345`
-- Клиент доступен: `python lab2/client.py`
+- Клиент доступен: `python client.py`
 
 ## 1) Успешная аутентификация (верный секрет)
 1. На сервере: `CHALLENGE alice` → получите `ID` и `CHALLENGE` (hex).
 2. На клиенте посчитать ответ:
-   - `python lab2/client.py --secret "pass phrase" --id <ID> --challenge <HEX>`
+   - `python client.py --secret "pass phrase" --id <ID> --challenge <HEX>`
    - Вывод hex — это `response`.
 3. На сервере выполнить:
    - `AUTH alice <ID> <response_hex>` → сервер ответит `OK`.
@@ -21,7 +21,7 @@
 2. `AUTH alice <ID> <bad_response_hex>` → ожидается `FAIL`.
 
 ## 3) Повторное использование отклика
-- Челлендж одноразовый: сервер удаляет его после проверки. Повторный `AUTH` с тем же `ID` приведёт к `FAIL`.
+- Челлендж одноразовый: сервер удаляет его после проверки. Повторный `AUTH` с тем же `ID` при ведёт к `FAIL`.
 
 ## 4) Истечение времени ожидания
 - Челленджи имеют TTL ≈ 120 с. По истечении времени `AUTH` с этим `ID` вернёт `FAIL`.

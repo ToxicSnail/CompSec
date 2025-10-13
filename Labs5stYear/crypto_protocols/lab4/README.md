@@ -86,4 +86,3 @@ Server summary: {"type": "RESULT", ...}
 - `python3 lab4/server.py --help`
 - `python3 lab4/client.py --help`
 - `python3 -m compileall lab4` — быстрый синтаксический тест.
-

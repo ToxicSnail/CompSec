@@ -19,7 +19,7 @@ from dh import (
     validate_parameters,
     validate_public_key,
 )
-from rfc3526 import get_group, list_groups
+from rfc3526_groups import get_group, list_groups
 
 
 class DHSession:
@@ -195,7 +195,7 @@ class DiffieHellmanServer:
                             continue
                         secret_hex = session.last_shared_hex
                         kdf = session.last_shared_kdf
-                        # kdf = kdf[:-1] + "0"
+                        kdf = kdf[:-1] + "0"
                         msg = (
                             "OK\n"
                             f"SHARED_SECRET_HEX: {secret_hex}\n"

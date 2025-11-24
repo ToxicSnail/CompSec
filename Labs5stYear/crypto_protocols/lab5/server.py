@@ -55,7 +55,7 @@ class TrentState:
         self.pub = pub
         self.priv = priv
         self.tokens: List[Token] = []
-        self.next_requesters: Dict[int, str] = {}  # n -> next requester name
+        self.next_requesters: Dict[int, str] = {}
 
     def last_link(self) -> str:
         if not self.tokens:
@@ -81,7 +81,6 @@ class TrentState:
             link_hash=link,
         )
         self.tokens.append(tok)
-        # record next requester for previous token if exists
         if tok.prev_summary is not None:
             self.next_requesters[tok.prev_summary["n"]] = name
         sig = rsa_sign(self.priv, tok.canonical())
@@ -149,7 +148,6 @@ def handle_client(sock: socket.socket, addr: Tuple[str, int], state: TrentState,
                     valid = pow(sig_int, pub.e, pub.n) == int.from_bytes(
                         __import__("hashlib").sha256(body_json).digest(), "big"
                     ) % pub.n
-                    # also check link consistency if we have this n
                     reason = None
                     if valid and 1 <= int(token.get("n", 0)) <= len(state.tokens):
                         stored = state.tokens[int(token["n"]) - 1]
@@ -157,7 +155,7 @@ def handle_client(sock: socket.socket, addr: Tuple[str, int], state: TrentState,
                             valid = False
                             reason = "link_hash mismatch"
                     _send_json(sock, {"type": "VERIFIED", "valid": bool(valid), **({"reason": reason} if reason else {})})
-                except Exception as exc:  # noqa: BLE001
+                except Exception as exc:
                     _send_json(sock, {"type": "VERIFIED", "valid": False, "reason": str(exc)})
                 continue
             _send_json(sock, {"type": "ERROR", "error": "unknown action"})

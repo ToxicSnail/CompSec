@@ -1,0 +1,17 @@
+{
+ "Device" : "GW2A-18C",
+ "Files" : [
+  {
+   "Path" : "//wsl.localhost/Ubuntu/home/jl4ctuk/tsu/semen/lab3/kirill/rtl/crc23.sv",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "//wsl.localhost/Ubuntu/home/matrixxx/Code/Study/CompSec/Labs5stYear/hardware_impl_crypto/lab3/fpga_project/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

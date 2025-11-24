@@ -1,0 +1,11 @@
+never no_deadlock {    /* !([] (<> ((((((state[0]==eating)) || ((state[1]==eating))) || ((state[2]==eating))) || ((state[3]==eating))) || ((state[4]==eating))))) */
+T0_init:
+	do
+	:: (! (((((((state[0]==eating)) || ((state[1]==eating))) || ((state[2]==eating))) || ((state[3]==eating))) || ((state[4]==eating))))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((((((state[0]==eating)) || ((state[1]==eating))) || ((state[2]==eating))) || ((state[3]==eating))) || ((state[4]==eating))))) -> goto accept_S4
+	od;
+}

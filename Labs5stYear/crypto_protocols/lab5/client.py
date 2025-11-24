@@ -110,27 +110,35 @@ def cmd_get(args: argparse.Namespace) -> None:
         s.close()
 
 
+def _add_common_options(sp: argparse.ArgumentParser) -> None:
+    sp.add_argument("--host", default="127.0.0.1")
+    sp.add_argument("--port", type=int, default=13000)
+
+
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Lab5 client (Alice)")
-    p.add_argument("--host", default="127.0.0.1")
-    p.add_argument("--port", type=int, default=13000)
+    _add_common_options(p)
     sub = p.add_subparsers(dest="cmd", required=True)
 
     s_stamp = sub.add_parser("stamp", help="Request timestamp for text or file")
+    _add_common_options(s_stamp)  
     s_stamp.add_argument("--name", required=True, help="Alice's identifier")
     s_stamp.add_argument("--text", help="Inline text to hash")
     s_stamp.add_argument("--file", help="File path to hash")
     s_stamp.set_defaults(func=cmd_stamp)
 
     s_verify = sub.add_parser("verify", help="Verify a saved token JSON")
+    _add_common_options(s_verify)
     s_verify.add_argument("--token", required=True, help="Path to JSON from STAMPED response")
     s_verify.set_defaults(func=cmd_verify)
 
     s_neighbor = sub.add_parser("neighbor", help="Get next requester after token n")
+    _add_common_options(s_neighbor)
     s_neighbor.add_argument("--n", type=int, required=True)
     s_neighbor.set_defaults(func=cmd_neighbor)
 
     s_get = sub.add_parser("get", help="Fetch token by sequence number")
+    _add_common_options(s_get)
     s_get.add_argument("--n", type=int, required=True)
     s_get.set_defaults(func=cmd_get)
 
@@ -144,4 +152,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

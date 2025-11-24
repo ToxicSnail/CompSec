@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "//wsl.localhost/Ubuntu/home/matrixxx/Code/Study/CompSec/Labs5stYear/hardware_impl_crypto/lab3/fpga_project/Documents/lab3/src/crc23.sv",
+  "InstLine" : 1,
+  "InstName" : "crc23",
+  "ModuleFile" : "//wsl.localhost/Ubuntu/home/matrixxx/Code/Study/CompSec/Labs5stYear/hardware_impl_crypto/lab3/fpga_project/Documents/lab3/src/crc23.sv",
+  "ModuleLine" : 1,
+  "ModuleName" : "crc23"
+ }
+]

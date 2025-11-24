@@ -1,0 +1,18 @@
+-d /home/jl4ctuk/tsu/semen/lab3/kirill/fpga_project/impl/gwsynthesis/fpga_project.vg
+-p GW2A-18C-PBGA256-8
+-pn GW2A-LV18PG256C8/I7
+-cst /home/jl4ctuk/tsu/semen/lab3/kirill/constr/pins.cst
+-cfg /home/jl4ctuk/tsu/semen/lab3/kirill/fpga_project/impl/pnr/device.cfg
+-sdc /home/jl4ctuk/tsu/semen/lab3/kirill/constr/clocks.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

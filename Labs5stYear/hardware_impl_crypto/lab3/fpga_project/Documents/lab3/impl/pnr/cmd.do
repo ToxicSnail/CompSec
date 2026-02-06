@@ -1,0 +1,18 @@
+-d \\wsl.localhost\Ubuntu\home\matrixxx\Code\Study\CompSec\Labs5stYear\hardware_impl_crypto\lab3\fpga_project\Documents\lab3\impl\gwsynthesis\lab3.vg
+-p GW2A-18C-PBGA256-8
+-pn GW2A-LV18PG256C8/I7
+-cst \\wsl.localhost\Ubuntu\home\matrixxx\Code\Study\CompSec\Labs5stYear\hardware_impl_crypto\lab3\fpga_project\Documents\lab3\src\pins.cst
+-cfg \\wsl.localhost\Ubuntu\home\matrixxx\Code\Study\CompSec\Labs5stYear\hardware_impl_crypto\lab3\fpga_project\Documents\lab3\impl\pnr\device.cfg
+-sdc \\wsl.localhost\Ubuntu\home\matrixxx\Code\Study\CompSec\Labs5stYear\hardware_impl_crypto\lab3\fpga_project\Documents\lab3\src\clocks.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

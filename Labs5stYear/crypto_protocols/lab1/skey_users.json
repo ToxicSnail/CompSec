@@ -1,0 +1,38 @@
+{
+  "alice": {
+    "last_hash": "24130824DB7E0DBC",
+    "seed": "990E",
+    "seq": 100,
+    "max_seq": 100
+  },
+  "administrator": {
+    "last_hash": "DC08FA43FE2AA295",
+    "seed": "DC88",
+    "seq": 100,
+    "max_seq": 100
+  },
+  "bob": {
+    "last_hash": "FBCB3162E7FCE635",
+    "seed": "F826",
+    "seq": 9,
+    "max_seq": 10
+  },
+  "loh": {
+    "last_hash": "5801D861943B1E3C",
+    "seed": "8087",
+    "seq": 9,
+    "max_seq": 10
+  },
+  "test": {
+    "last_hash": "41B2BCD6F847D17E",
+    "seed": "9CF9",
+    "seq": 8,
+    "max_seq": 10
+  },
+  "anya": {
+    "last_hash": "76198F4464F8B9D3",
+    "seed": "2456",
+    "seq": 9,
+    "max_seq": 10
+  }
+}
